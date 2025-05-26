@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Punjab School System</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2, h3 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        hr {
+            border: 1px solid #ccc;
+        }
+
+        /* Centering text */
+        .center {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-container {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 100;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Ensure logo and text stack */
+        }
+
+        /* Logo Style */
+        .logo {
+            width: 68px;
+            height: 68px;
+        }
+
+        /* Responsive Images */
+        .responsive-img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: rgb(15, 168, 250);
+            color: white;
+            padding: 20px;
+        }
+
+        .footer hr {
+            border-top: 1px solid #fff;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .social-icon {
+            font-size: 24px;
+            color: #3b5998;
+            margin-right: 10px;
+        }
+
+        /* Unordered List Styles */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            justify-content: center;
+        }
+
+        li img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        li span {
+            font-size: 16px;
+        }
+
+        /* Table Styles */
+        .tables {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+            background-color: #ccc;
+        }
+
+        .tables th, .tables td {
+            text-align: center;
+            padding: 20px 15px;
+        }
+
+        .tables th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        .tables td {
+            vertical-align: top;
+        }
+
+        .blue-bold {
+            color: #3b5998;
+        }
+
+        .balck-bold {
+            color: black;
+        }
+
+        /* Style for the 'Why Choose' Section */
+        .choose-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+        }
+
+        .choose-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+            flex-wrap: wrap; /* Allows content to wrap for small screens */
+        }
+
+        .choose-image {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .choose-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .choose-text {
+            flex: 2;
+            font-size: 16px;
+        }
+
+        .choose-text h3 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .choose-text p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #3b5998;
+        }
+
+        .choose-text ul {
+            padding-left: 20px;
+            font-size: 16px;
+        }
+
+        .choose-text li {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Design for Smaller Screens */
+        @media (max-width: 768px) {
+            h2, h3 {
+                font-size: 20px;
+            }
+
+            .logo {
+                width: 50px;
+                height: 50px;
+            }
+
+            /* Adjust the logo container for smaller screens */
+            .logo-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            /* Adjust the list items */
+            ul {
+                padding: 0;
+                margin: 0;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            li {
+                margin-bottom: 15px;
+                justify-content: center;
+            }
+
+            li img {
+                width: 40px;
+                height: 40px;
+            }
+
+            /* Adjust table sizes for mobile */
+            .tables td, .tables th {
+                font-size: 14px;
+                padding: 12px;
+            }
+
+            /* Adjust the 'Why Choose' section */
+            .choose-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .choose-container {
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .choose-image {
+                padding-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .choose-text {
+                font-size: 14px;
+            }
+
+            .footer {
+                padding: 15px;
+                font-size: 14px;
+            }
+
+            /* Adjust social icons in footer */
+            .social-icon {
+                font-size: 20px;
+                margin-right: 8px;
+            }
+        }
+
+        /* Further tweaks for very small screens */
+        @media (max-width: 480px) {
+            .logo {
+                width: 40px;
+                height: 40px;
+            }
+
+            h2, h3 {
+                font-size: 18px;
+            }
+
+            .choose-text h3 {
+                font-size: 22px;
+            }
+
+            .footer {
+                padding: 10px;
+                font-size: 12px;
+            }
+
+            .choose-text p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="school.png" class="logo" alt="School Logo">
+        <h2><b>The Punjab School System</b></h2>
+    </div>
+    <hr>
+
+    <div class="center">
+        <img src="full.jpg" class="responsive-img" alt="School Image">
+    </div>
+
+    <div class="center">
+      <ul>
+        <li><img src="image1.png" alt="Image 1"><span><a href=about_us.html>About Us</a></span></li>
+        <li><img src="image2.png" alt="Image 2"><span><a href=education.html>Education</a></span></li>
+        <li><img src="image3.png" alt="Image 3"><span><a href=facilities.html>Our Facilities</a></span></li>
+        <li><img src="image5.png" alt="Image 5"><span><a href="https://www.facebook.com/profile.php?id=100076140465117&mibextid=ZbWKwL" target="_blank" title="Facebook">Social Media</a></span></li>
+        <li><img src="image6.png" alt="image6"><span><a href= "events.html">Events</a></span></li>
+      </ul>
+    </div>
+
+    <div class="center">
+      <img src="message.png" class="responsive-img" alt="Message">
+    </div>
+
+    <div class="tables">
+      <table>
+        <tr>
+          <td align="center">
+            <img src="education.png" width="50px" height="50px">
+          </td>
+          <td align="center">
+            <img src="latest.png" width="50px" height="50px">
+          </td>
+          <td align="center">
+            <img src="curriculum.png" width="50px" height="50px">
+          </td>
+          <td align="center">
+            <img src="staff.png" width="50px" height="50px">
+          </td>
+        </tr>
+
+        <tr>
+          <td><b>Education Services</b></td>
+          <td><b>Latest Education Methods</b></td>
+          <td><b>Curriculum And Affiliation</b></td>
+          <td><b>Staff Development</b></td>
+        </tr>
+
+        <tr>
+          <td>The Punjab School is committed to educate learners and educators through innovative technology.</td>
+          <td>The School Management has established a state-of-the-art Innovation Centre aimed to set higher benchmarks for educational excellence.</td>
+          <td>The designing of school curricula requires a conceptual foresight and imagination. Exhaustive evaluation and improvements are made year after year to keep the curriculum dynamic.</td>
+          <td>In-service trainings are arranged throughout the year with utmost care that they provide an opportunity for teachers to grow their knowledge and sharpen their skills, which can lead to better student outcomes.</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Why Choose The Punjab School Section -->
+    <div class="choose-section">
+      <div class="choose-container">
+          <div class="choose-image">
+              <img src="benefits.jpg" alt="Why Choose The Punjab School" class="choose-img">
+          </div>
+          <div class="choose-text">
+              <h3>Why Choose The Punjab School?</h3>
+              <p>We strive to:</p>
+              <ul>
+                  <li>Diffuse the light of superb quality education at reasonably affordable expense to the less affording, and economically lower strata of society;</li>
+                  <li>Seek and hire competent and committed educators to sharpen the intellect of students and create in them a strong sense of objectivity, will power, and self-direction.</li>
+                  <li>Arouse in students a pragmatic and practical approach enabling them to solve complex problems in a scientific style.</li>
+              </ul>
+          </div>
+      </div>
+    </div>
+
+    <div class="footer">
+        <div class="center">
+            <img src="school.png" class="logo" alt="School Logo">
+            <p>
+                The Punjab School System<br>
+                Sehar Villa House#1<br>
+                Raheem Chowk, Dokota Road, Mitru<br><br>
+                0300-6362567
+            </p>
+            <hr>
+
+            <h3>Our Campuses</h3>
+            <hr>
+            <p>
+                City Campus<br>
+                Fatima Campus
+            </p>
+
+            <p>
+                Copyright All Rights Reserved, The Punjab School
+            </p>
+            <div class="center">
+              <p><b>Follow us on Social Media</b></p>
+              <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100076140465117&mibextid=ZbWKwL" target="_blank" title="Facebook">
+                  <i class="fab fa-facebook-square social-icon"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" title="Instagram">
+                  <i class="fab fa-instagram social-icon"></i>
+                </a>
+              </div>
+            </div>
+        </div>
+    </div>  
+</body>
+</html>

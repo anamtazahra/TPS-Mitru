@@ -1,0 +1,208 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images with Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+        p {
+            text-align: center;
+            margin: 10px 20px;
+            color: #555;
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 250px;  /* Set a fixed width for images */
+            object-fit: cover;
+        }
+
+        /* Mobile-friendly adjustments */
+        @media (max-width: 768px) {
+            .image-container img {
+                width: 100%;  /* Adjust images to fit the screen size */
+            }
+            .footer {
+                font-size: 14px;  /* Adjust font size in footer */
+            }
+            .footer h3 {
+                font-size: 16px;  /* Smaller heading size for mobile */
+            }
+            .logo-container h2 {
+                font-size: 20px;  /* Reduce logo text size */
+            }
+        }
+
+        .footer {
+            background-color: rgb(15, 168, 250); /* Blue background color */
+            color: white;
+            padding: 20px; /* Padding for space inside footer */
+        }
+
+        .footer p {
+            font-size: 16px; /* Default font size for footer text */
+            color: white;
+        }
+
+        .footer hr {
+          border-top: 1px solid #fff; /* Solid, white, 10px thick top border */
+          width: 100%; /* Full width of the parent container */
+          margin: 20px 0; /* Space above and below the line */
+        }
+
+        .footer .center {
+            text-align: center; /* Center the content inside */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .logo-container {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 100;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } 
+
+        .logo {
+            width: 68px; /* Logo size */
+            height: 68px;
+        }
+
+        .footer h3 {
+            font-size: 18px; /* Font size for headings */
+            color: white;
+        }
+
+        .footer .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer .social-icon {
+            font-size: 24px; /* Social media icon size */
+            color: #3b5998; /* Facebook color */
+            margin-right: 10px;
+            color: white;
+        }
+
+        .footer .social-icon:hover {
+            color: #000000; /* Hover effect for social media icons */
+            color: white;
+        }
+
+        .footer .social-icons a {
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .footer .social-icons i {
+            font-size: 24px;
+            color: #3b5998; /* Social media icon color */
+        }
+
+        .footer .social-icons i:hover {
+            color: #000000; /* Hover effect for social icons */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <img src="school.png" class="logo" alt="School Logo">
+        <h2><b>The Punjab School System</b></h2>
+    </div>
+    <hr>
+
+    <h1>Culture Day</h1>
+    <p>Culture Day is a celebration of the diverse traditions, customs, and heritage that make up our community. It is a day to showcase our colorful and vibrant cultural expressions.</p>
+    <div class="image-container">
+        <img src="img1.jpg" alt="Culture Day">
+        <img src="img2.jpg" alt="Culture Day">
+        <img src="img3.jpg" alt="Culture Day">
+        <img src="img4.jpg" alt="Culture Day">
+        <img src="img5.jpg" alt="Culture Day">
+    </div>
+
+    <h1>Defence Day</h1>
+    <p>Defence Day commemorates the bravery and sacrifices of our armed forces in defending our nation's sovereignty. It is a tribute to their patriotism and courage.</p>
+    <div class="image-container">
+        <img src="img6.jpg" alt="Defence Day">
+        <img src="img7.jpg" alt="Defence Day">
+        <img src="img8.jpg" alt="Defence Day">
+        <img src="img9.jpg" alt="Defence Day">
+    </div>
+
+    <h1>14 August Independence Day</h1>
+    <p>14 August marks the day of our nation's independence. It is a time to celebrate our freedom, reflect on our history, and honor the struggles of those who fought for our liberty.</p>
+    <div class="image-container">
+        <img src="img10.jpg" alt="Independence Day">
+        <img src="img11.jpg" alt="Independence Day">
+        <img src="img12.jpg" alt="Independence Day">
+        <img src="img13.jpg" alt="Independence Day">
+    </div>
+
+    <div class="footer">
+        <div class="center">
+            <img src="school.png" class="logo" alt="School Logo">
+            <p>
+                The Punjab School System<br>
+                Sehar Villa House#1<br>
+                Raheem Chowk, Dokota Road, Mitru<br><br>
+                0300-6362567
+            </p>
+            <hr>
+    
+            <h3>Our Campuses</h3>
+            <hr>
+            <p>
+                City Campus<br>
+                Fatima Campus
+            </p>
+    
+            <p>
+                Copyright All Rights Reserved, The Punjab School
+            </p>
+            <div class="center">
+              <p><b>Follow us on Social Media</b></p>
+              <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100076140465117&mibextid=ZbWKwL" target="_blank" title="Facebook">
+                  <i class="fab fa-facebook-square social-icon"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" title="Instagram">
+                  <i class="fab fa-instagram social-icon"></i>
+                </a>
+              </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

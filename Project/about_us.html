@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Punjab School | About Us</title>
+    <!-- Add Font Awesome CDN link to the head section -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+
+        /* Center container styling */
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Image styling */
+        img {
+            width: 100%;
+            max-width: 100%; /* Ensure image is responsive */
+            height: auto;
+            border: 2px solid #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Headings */
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2rem; /* Set default font size for headings */
+        }
+
+        /* Paragraph text */
+        p {
+            color: #555;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        header.hero {
+            color: #fff;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: left;
+            background-image: url(img/World-education.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        header.hero .overlay {
+            background-image:url(img14.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items:flex-start;
+            justify-content: center;
+        }
+
+        header.hero h1 {
+            font-size: 36px;
+            margin-bottom: 0.5rem;
+            color: #00bcd4;
+            text-align: left;
+        }
+
+        header.hero h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: rgb(10, 0, 0);
+            margin-top: 0;
+            text-align: left;
+        }
+
+        /* 'Why Choose' Section */
+        .choose-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            flex-direction: row;
+        }
+
+        .choose-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .choose-image, .choose-image1 {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .choose-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .choose-text {
+            flex: 2;
+            font-size: 16px;
+        }
+
+        .choose-text h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .choose-text p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #3b5998;
+        }
+
+        /* Adjust flex direction for 'Moving Forward with Technology' section */
+        .choose-section:nth-child(2) .choose-container {
+            flex-direction: row-reverse; /* Move the image to the right and text to the left */
+        }
+
+        .choose-section:nth-child(2) .choose-image1 {
+            padding-left: 20px; /* Adjust padding for image on the right */
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: rgb(15, 168, 250); /* Blue background color */
+            color: white;
+            padding: 20px; /* Padding for space inside footer */
+        }
+
+        .footer p {
+            font-size: 16px; /* Default font size for footer text */
+            color: white;
+        }
+
+        .footer hr {
+            border-top: 1px solid #fff; /* Solid, white, 10px thick top border */
+            width: 100%; /* Full width of the parent container */
+            margin: 20px 0; /* Space above and below the line */
+        }
+
+        .footer .center {
+            text-align: center; /* Center the content inside */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .logo-container {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 100;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            width: 68px; /* Logo size */
+            height: 68px;
+        }
+
+        .footer h3 {
+            font-size: 18px; /* Font size for headings */
+            color: white;
+        }
+
+        .footer .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer .social-icon {
+            font-size: 24px; /* Social media icon size */
+            color: #3b5998; /* Facebook color */
+            margin-right: 10px;
+            color: white;
+        }
+
+        .footer .social-icon:hover {
+            color: #000000; /* Hover effect for social media icons */
+            color: white;
+        }
+
+        .footer .social-icons a {
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .footer .social-icons i {
+            font-size: 24px;
+            color: #3b5998; /* Social media icon color */
+        }
+
+        .footer .social-icons i:hover {
+            color: #000000; /* Hover effect for social icons */
+        }
+
+        /* Mobile Friendly Adjustments */
+        @media screen and (max-width: 768px) {
+            /* Adjust header for smaller screens */
+            header.hero h1 {
+                font-size: 28px;
+            }
+
+            header.hero h2 {
+                font-size: 20px;
+            }
+
+            /* Stack images and text vertically in 'Choose' sections */
+            .choose-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .choose-container {
+                flex-direction: column;
+            }
+
+            .choose-image, .choose-image1 {
+                padding-right: 0;
+                padding-left: 0;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .choose-text {
+                flex: 1;
+                padding: 20px;
+                text-align: center;
+            }
+
+            /* Adjust footer for smaller screens */
+            .footer p {
+                font-size: 14px;
+            }
+
+            .footer h3 {
+                font-size: 16px;
+            }
+
+            /* Social icons in footer */
+            .footer .social-icons {
+                flex-direction: column;
+            }
+
+            .footer .social-icon {
+                margin-bottom: 10px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            /* Smaller text for very small screens */
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .footer p {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+  <div class="logo-container">
+    <img src="school.png" class="logo" alt="School Logo">
+    <h2><b>The Punjab School System</b></h2>
+</div>
+<hr>
+
+    <!-- Section 1: About Us -->
+    <header class="hero">
+      <div class="overlay">
+          <h1>The Punjab School</h1>
+          <h2>About us</h2>
+      </div>
+  </header>
+
+  <div class="choose-section">
+    <div class="choose-container">
+        <div class="choose-image">
+            <img src="img15.jpg" alt="Our Campuses" class="choose-img">
+        </div>
+        <div class="choose-text">
+          <h1>Our Campuses</h1>
+          <p>
+          The classrooms in all the campuses are purpose-built, spacious, well-lit, and ventilated. These are furnished with necessary visual aids to ensure a superior academic environment. The furniture has been designed to ensure a comfortable and convenient posture according to the ages of the students. Each classroom provides a perfect academic aura for maximum learning opportunities.
+      </p>
+        </div>
+    </div>
+  </div>
+
+  <div class="choose-section">
+    <div class="choose-container">
+        <div class="choose-image1">
+            <img src="img16.jpg" alt="Moving Forward with technology" class="choose-img">
+        </div>
+        <div class="choose-text">
+          <h1>Moving Forward with Technology</h1>
+          <p>
+            To keep pace with the international developments in Educational Technology, ensuring an enabling environment towards digital pedagogical practices through highly trained teaching faculty, and the integration of technology with education has a significant impact on the teaching-learning process.
+      </p>
+        </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="center">
+        <img src="school.png" class="logo" alt="School Logo">
+        <p>
+            The Punjab School System<br>
+            Sehar Villa House#1<br>
+            Raheem Chowk, Dokota Road, Mitru<br><br>
+            0300-6362567
+        </p>
+        <hr>
+
+        <h3>Our Campuses</h3>
+        <hr>
+        <p>
+            City Campus<br>
+            Fatima Campus
+        </p>
+
+        <p>
+            Copyright All Rights Reserved, The Punjab School
+        </p>
+        <div class="center">
+          <p><b>Follow us on Social Media</b></p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100076140465117&mibextid=ZbWKwL" target="_blank" title="Facebook">
+              <i class="fab fa-facebook-square social-icon"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" title="Instagram">
+              <i class="fab fa-instagram social-icon"></i>
+            </a>
+          </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

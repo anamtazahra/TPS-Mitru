@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+  <title>School Facilities</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      color: rgb(14, 0, 0);
+      text-align: center;
+      padding: 1em 0;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    #facilities {
+      text-align: center;
+    }
+
+    #facility-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .facility {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      width: 300px;
+      background-color: #f9f9f9;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .facility img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .logo-container {
+      position: sticky;
+      top: 0;
+      background-color: white;
+      z-index: 100;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo {
+      width: 68px; /* Logo size */
+      height: 68px;
+    }
+
+    header.hero {
+      color: #fff;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-align: left;
+      background-image: url('full.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    header.hero .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      height: 50vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    header.hero h1 {
+      font-size: 36px;
+      margin-bottom: 0.5rem;
+      color: #00bcd4;
+    }
+
+    header.hero h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: rgb(10, 0, 0);
+      margin-top: 0;
+    }
+
+    .footer {
+      background-color: rgb(15, 168, 250) !important;
+      color: white;
+      padding: 20px;
+    }
+    .footer hr {
+          border-top: 1px solid #fff; /* Solid, white, 10px thick top border */
+    width: 100%; /* Full width of the parent container */
+    margin: 20px 0; /* Space above and below the line */
+        }
+
+    .social-icon {
+      font-size: 24px;
+      color: #3b5998;
+      margin-right: 10px;
+    }
+
+    .center {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(15, 168, 250) !important;
+        }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="school.png" class="logo" alt="School Logo">
+      <h2><b>The Punjab School System</b></h2>
+    </div>
+    <hr>
+  </header>
+
+  <header class="hero">
+    <div class="overlay">
+      <h1>The Punjab School</h1>
+      <h2>Our Facilities</h2>
+    </div>
+  </header>
+
+  <main>
+    <section id="facilities">
+      <div id="facility-list">
+        <!-- Facility 1 -->
+        <div class="facility">
+          <img src="lab.jpg" alt="Laboratories">
+          <h3>Laboratories</h3>
+          <p>School laboratories provide hands-on experience for students, equipped with modern instruments and safety features, to explore scientific concepts and develop critical thinking and problem-solving skills.</p>
+        </div>
+        
+        <!-- Facility 2 -->
+        <div class="facility">
+          <img src="health.jpg" alt="Health Care">
+          <h3>Health Care</h3>
+          <p>Schools provide healthcare facilities, including clinics, first aid rooms, and medical staff, to ensure students' physical and mental well-being, and to provide immediate medical attention in case of emergencies.</p>
+        </div>
+
+        <!-- Facility 3 -->
+        <div class="facility">
+          <img src="class.jpg" alt="Classrooms">
+          <h3>Classrooms</h3>
+          <p>Classrooms are equipped with facilities like comfortable seating, modern teaching aids, internet connectivity, proper lighting and ventilation, storage space, and audio-visual equipment, creating an ideal learning environment.</p>
+        </div>
+
+        <!-- Facility 4 -->
+        <div class="facility">
+          <img src="security.jpg" alt="Security">
+          <h3>Security</h3>
+          <p>Schools have robust security facilities, including CCTV cameras, secure entry/exit points, trained security personnel, emergency response systems, and regular drills to ensure students' safety and well-being.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="center">
+      <img src="school.png" class="logo" alt="School Logo">
+      <p>
+        The Punjab School System<br>
+        Sehar Villa House#1<br>
+        Raheem Chowk, Dokota Road, Mitru<br><br>
+        0300-6362567
+      </p>
+      <hr>
+
+      <h3>Our Campuses</h3>
+      <hr>
+      <p>
+        City Campus<br>
+        Fatima Campus
+      </p>
+
+      <p>
+        Copyright All Rights Reserved, The Punjab School
+      </p>
+
+      <div class="center">
+        <p><b>Follow us on Social Media</b></p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100076140465117&mibextid=ZbWKwL" target="_blank" title="Facebook">
+            <i class="fab fa-facebook-square social-icon"></i>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" title="Instagram">
+            <i class="fab fa-instagram social-icon"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
