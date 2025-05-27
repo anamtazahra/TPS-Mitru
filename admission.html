@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Punjab School System - Admission Form</title>
+    <style>
+        /* Basic styles for page layout */
+        body {
+            font-family: Arial, sans-serif;  /* Makes text easy to read */
+            background-color: #f4f4f4;  /* Light background color */
+            padding: 20px;  /* Adds space around the content */
+        }
+
+        h1, h2 {
+            text-align: center;  /* Centers the headings */
+            color: #4CAF50;  /* Green color for the headings */
+        }
+
+        .form-container {
+            background-color: white;  /* White background for the form */
+            padding: 20px;  /* Adds space inside the form container */
+            border-radius: 8px;  /* Rounds the corners of the form */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  /* Adds shadow for a 3D effect */
+            max-width: 800px;  /* Limits the width of the form */
+            margin: 20px auto;  /* Centers the form on the page */
+        }
+
+        table {
+            width: 100%;  /* Makes the table take full width of the container */
+            border-collapse: collapse;  /* Collapses table borders */
+        }
+
+        td {
+            padding: 10px;  /* Adds space inside each table cell */
+            text-align: left;  /* Aligns text to the left inside cells */
+        }
+
+        /* Styles for form inputs to use horizontal lines */
+        input[type="text"], input[type="email"], input[type="date"], input[type="number"], select {
+            width: 100%;  /* Makes inputs take full width */
+            padding: 8px;  /* Adds padding inside inputs */
+            border: none;  /* Removes default border */
+            border-bottom: 2px solid #4CAF50;  /* Adds a horizontal green line at the bottom */
+            background-color: transparent;  /* Makes background transparent */
+            margin-top: 5px;  /* Adds space above inputs */
+        }
+
+        /* Focus effect when the input is clicked */
+        input[type="text"]:focus, input[type="email"]:focus, input[type="date"]:focus, input[type="number"]:focus, select:focus {
+            outline: none;  /* Removes the default outline */
+            border-bottom: 2px solid #45a049;  /* Darker green line when focused */
+        }
+
+        /* Styles for submit button */
+        input[type="submit"] {
+            background-color: #4CAF50;  /* Green background color */
+            color: white;  /* White text on button */
+            padding: 10px 20px;  /* Adds padding inside the button */
+            cursor: pointer;  /* Changes cursor to pointer on hover */
+            border: none;  /* Removes border */
+            border-radius: 4px;  /* Rounds button corners */
+            margin-top: 10px;  /* Adds space above button */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;  /* Darker green when hovered */
+        }
+
+        .bold {
+            font-weight: bold;  /* Makes text bold */
+        }
+
+        .logo-container {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 100;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Logo Style */
+        .logo {
+            width: 68px;
+            height: 68px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <img src="school.png" class="logo" alt="School Logo">
+        <h2><b>The Punjab School System</b></h2>
+    </div>
+    <hr>
+    <!-- Page title -->
+    <h1>The Punjab School System</h1>
+    <h2>City Campus</h2>
+    <p style="text-align: center;">School Address: Sehar Villa, House #1, Raheem Chowk, Dokota Road, Multan</p>
+    
+    <!-- Form container -->
+    <div class="form-container">
+        <h3 class="bold">Admission Form</h3>
+        
+        <!-- Form that will collect the user's information -->
+        <form id="admissionForm" onsubmit="return validateForm()">
+            <table>
+                <!-- Row 1: Student Name -->
+                <tr>
+                    <td><label for="studentName">Student Name:</label></td>
+                    <td><input type="text" id="studentName" name="studentName" required></td>
+                </tr>
+                
+                <!-- Row 2: Gender -->
+                <tr>
+                    <td><label for="gender">Gender:</label></td>
+                    <td>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </td>
+                </tr>
+                
+                <!-- Row 3: Form "B" No. -->
+                <tr>
+                    <td><label for="formBNo">Form "B" No./Block:</label></td>
+                    <td><input type="text" id="formBNo" name="formBNo" required></td>
+                </tr>
+                
+                <!-- Row 4: Date of Birth -->
+                <tr>
+                    <td><label for="dob">Date of Birth (in words or figure):</label></td>
+                    <td><input type="text" id="dob" name="dob" required></td>
+                </tr>
+                
+                <!-- Row 5: Father/Guardian Name -->
+                <tr>
+                    <td><label for="fatherName">Father/Guardian Name:</label></td>
+                    <td><input type="text" id="fatherName" name="fatherName" required></td>
+                </tr>
+                
+                <!-- Row 6: Religion -->
+                <tr>
+                    <td><label for="religion">Religion:</label></td>
+                    <td><input type="text" id="religion" name="religion" required></td>
+                </tr>
+                
+                <!-- Row 7: Caste -->
+                <tr>
+                    <td><label for="caste">Caste:</label></td>
+                    <td><input type="text" id="caste" name="caste" required></td>
+                </tr>
+                
+                <!-- Row 8: Father/Guardian CNIC -->
+                <tr>
+                    <td><label for="cnic">Father/Guardian CNIC No.:</label></td>
+                    <td><input type="number" id="cnic" name="cnic" required></td>
+                </tr>
+                
+                <!-- Row 9: Postal Address -->
+                <tr>
+                    <td><label for="postalAddress">Postal Address:</label></td>
+                    <td><input type="text" id="postalAddress" name="postalAddress" required></td>
+                </tr>
+                
+                <!-- Row 10: Telephone No. -->
+                <tr>
+                    <td><label for="telephone">Telephone No.:</label></td>
+                    <td><input type="number" id="telephone" name="telephone" required></td>
+                </tr>
+                
+                <!-- Row 11: Grade for Admission -->
+                <tr>
+                    <td><label for="grade">Grade for which admission is required:</label></td>
+                    <td><input type="text" id="grade" name="grade" required></td>
+                </tr>
+                
+                <!-- Row 12: Date -->
+                <tr>
+                    <td><label for="date">Date:</label></td>
+                    <td><input type="date" id="date" name="date" required></td>
+                </tr>
+                
+                <!-- Row 13: Email -->
+                <tr>
+                    <td><label for="email">Email Address:</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+                
+                <!-- Submit Button -->
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <!-- JavaScript for form validation -->
+    <script>
+        function validateForm() {
+            // Get form values
+            const studentName = document.getElementById('studentName').value;
+            const formBNo = document.getElementById('formBNo').value;
+            const dob = document.getElementById('dob').value;
+            const fatherName = document.getElementById('fatherName').value;
+            const religion = document.getElementById('religion').value;
+            const caste = document.getElementById('caste').value;
+            const cnic = document.getElementById('cnic').value;
+            const postalAddress = document.getElementById('postalAddress').value;
+            const telephone = document.getElementById('telephone').value;
+            const grade = document.getElementById('grade').value;
+            const date = document.getElementById('date').value;
+            const email = document.getElementById('email').value;
+
+            // Check if all fields are filled
+            if (!studentName || !formBNo || !dob || !fatherName || !religion || !caste || !cnic || !postalAddress || !telephone || !grade || !date || !email) {
+                alert("All fields must be filled out correctly.");
+                return false;
+            }
+
+            // Show a success message when the form is submitted
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</body>
+</html>
